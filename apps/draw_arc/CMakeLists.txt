@@ -7,7 +7,6 @@ add_executable(${TARGET_NAME}
 set_target_properties(${TARGET_NAME}
     PROPERTIES
 	CXX_STANDARD 17
-	    INCLUDE_CURRENT_DIR ON
 )
 
 target_link_libraries(${TARGET_NAME}
