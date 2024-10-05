@@ -1,4 +1,4 @@
-set(NAMESPACE draw_arc)
+set(NAMESPACE draw_curve)
 set(MODULE core)
 
 set(TARGET_NAME "${NAMESPACE}_${MODULE}")

@@ -24,7 +24,7 @@ set_target_properties(${TARGET_NAME}
 # link against libs
 #
 target_link_libraries(${TARGET_NAME}
-    draw_arc::core
+    draw_curve::core
     GTest::gmock
     GTest::gtest
     GTest::gmock_main

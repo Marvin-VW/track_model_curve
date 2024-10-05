@@ -1,4 +1,4 @@
-set(TARGET_NAME draw_arc)
+set(TARGET_NAME draw_curve)
 
 add_executable(${TARGET_NAME}
     main.cc
@@ -11,5 +11,5 @@ set_target_properties(${TARGET_NAME}
 )
 
 target_link_libraries(${TARGET_NAME}
-    draw_arc::core
+    draw_curve::core
 )

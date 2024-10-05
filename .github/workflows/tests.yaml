@@ -68,8 +68,8 @@ jobs:
         ./unit_tests
     - name: 'Run smoke-test'
       run: |
-        cd build/apps/draw_arc/
-        # ./draw_arc --version
+        cd build/apps/draw_curve/
+        # ./draw_curve --version
 
   smoke-tests-macos:
     strategy:
@@ -96,5 +96,5 @@ jobs:
         ./unit_tests
     - name: 'Run smoke-test'
       run: |
-        cd build/apps/draw_arc/
-        # ./draw_arc --version
+        cd build/apps/draw_curve/
+        # ./draw_curve --version
