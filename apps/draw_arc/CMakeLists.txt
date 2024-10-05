@@ -1,7 +1,4 @@
-
 set(TARGET_NAME draw_arc)
-
-find_package(OpenCV REQUIRED)
 
 add_executable(${TARGET_NAME}
     main.cc
@@ -16,6 +13,5 @@ set_target_properties(${TARGET_NAME}
 )
 
 target_link_libraries(${TARGET_NAME}
-    ${OpenCV_LIBS}
-    #draw_arc::core
+    draw_arc::core
 )

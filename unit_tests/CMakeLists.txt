@@ -1,4 +1,4 @@
-# Copyright (C) 2023 twyleg
+# Copyright (C) 2024 twyleg
 set(TARGET_NAME unit_tests)
 
 
@@ -7,7 +7,6 @@ set(TARGET_NAME unit_tests)
 #
 add_executable(${TARGET_NAME}
     main.cc
-    example_class_test.cc
 )
 
 
@@ -25,8 +24,9 @@ set_target_properties(${TARGET_NAME}
 # link against libs
 #
 target_link_libraries(${TARGET_NAME}
-	GTest::gmock
-	GTest::gtest
-	GTest::gmock_main
-	GTest::gtest_main
+    draw_arc::core
+    GTest::gmock
+    GTest::gtest
+    GTest::gmock_main
+    GTest::gtest_main
 )
