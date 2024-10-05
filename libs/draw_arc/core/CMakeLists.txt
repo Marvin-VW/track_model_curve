@@ -29,8 +29,6 @@ set_target_properties(${TARGET_NAME}
     PROPERTIES
         CXX_STANDARD 17
         INCLUDE_CURRENT_DIR ON
-        AUTOMOC ON
-        AUTORCC ON
 )
 
 #
