@@ -1,6 +1,8 @@
 [![Build status](https://github.com/Marvin-VW/track_model_curve/actions/workflows/tests.yaml/badge.svg)]()
 [![GitHub latest commit](https://badgen.net/github/last-commit/Marvin-VW/track_model_curve)](https://GitHub.com/Marvin-VW/track_model_curve/commit/)
 
+# <img src="sample/image.png" alt="Sample" width="200"/>
+
 # track_model_curve
 
 Console-based arc calculator using OpenCV, drawn with OpenCV's ellipse function.
