@@ -1,5 +1,6 @@
-set(NAMESPACE draw_curve)
-set(MODULE core)
+#Copyright (C) 2024 Marvin-VW
+set(NAMESPACE track_model_curve)
+set(MODULE curve_calculator)
 
 set(TARGET_NAME "${NAMESPACE}_${MODULE}")
 
@@ -14,10 +15,8 @@ find_package(OpenCV REQUIRED)
 # add source files to target
 #
 add_library(${TARGET_NAME}
-    arc_algorithm.cc
     arc_algorithm.h
-    window.cc
-    window.h
+    arc_algorithm.cc
 )
 
 add_library("${NAMESPACE}::${MODULE}" ALIAS ${TARGET_NAME})
@@ -29,6 +28,8 @@ set_target_properties(${TARGET_NAME}
     PROPERTIES
         CXX_STANDARD 17
         INCLUDE_CURRENT_DIR ON
+        AUTOMOC ON
+        AUTORCC ON
 )
 
 #

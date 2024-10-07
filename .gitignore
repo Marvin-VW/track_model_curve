@@ -1,7 +1,7 @@
 build/
 **/build
-
 .vscode
-**/.DS_Store
 
+**/.DS_Store
+**/*.kate-swp
 CMakeLists.txt.user

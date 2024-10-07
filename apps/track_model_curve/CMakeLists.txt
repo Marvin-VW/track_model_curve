@@ -1,5 +1,7 @@
 # Copyright (C) 2024 twyleg
-set(TARGET_NAME unit_tests)
+set(TARGET_NAME track_model_curve)
+
+find_package(Qt6 COMPONENTS REQUIRED Core)
 
 
 #
@@ -17,6 +19,8 @@ set_target_properties(${TARGET_NAME}
     PROPERTIES
 	CXX_STANDARD 17
 	INCLUDE_CURRENT_DIR ON
+        AUTOMOC ON
+        AUTORCC ON
 )
 
 
@@ -25,8 +29,6 @@ set_target_properties(${TARGET_NAME}
 #
 target_link_libraries(${TARGET_NAME}
     track_model_curve::core
-    GTest::gmock
-    GTest::gtest
-    GTest::gmock_main
-    GTest::gtest_main
+    track_model_curve::ui
+    Qt::Core
 )
