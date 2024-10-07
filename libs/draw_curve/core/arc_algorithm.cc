@@ -33,12 +33,14 @@ void drawArcs(cv::Mat& image, double radius, double line_width, double step_dist
     bool first_step = true;
 
     if (!dashed) {
-        drawPoint(image, radius, start_radians);
-        drawPoint(image, radius, end_radians);
+        cv::Point2d point1 = drawPoint(image, radius, start_radians);
+        cv::Point2d point2 = drawPoint(image, radius+line_width, start_radians);
+        cv::line(image, point1, point2, cv::Scalar(0,0,255), 1);
         cv::ellipse(image, cv::Point(center_x, center_y), cv::Size(radius, radius), -90, RAD_TO_DEG(start_radians), RAD_TO_DEG(end_radians), cv::Scalar(0,0,255), 1);
 
-        drawPoint(image, radius+line_width, start_radians);
-        drawPoint(image, radius+line_width, end_radians);
+        point1 = drawPoint(image, radius+line_width, end_radians);
+        point2 = drawPoint(image, radius, end_radians);
+        cv::line(image, point1, point2, cv::Scalar(0,0,255), 1);
         cv::ellipse(image, cv::Point(center_x, center_y), cv::Size(radius+line_width, radius+line_width), -90, RAD_TO_DEG(start_radians), RAD_TO_DEG(end_radians), cv::Scalar(0,0,255), 1);
     }
     else {
@@ -60,7 +62,7 @@ void drawArcs(cv::Mat& image, double radius, double line_width, double step_dist
             cv::Point2d point1 = drawPoint(image, radius, current_angle);
             cv::Point2d point2 = drawPoint(image, radius+line_width, current_angle);
 
-            cv::line(image, point1, point2, cv::Scalar(0,0,255), 2);
+            cv::line(image, point1, point2, cv::Scalar(0,0,255), 1);
 
             if (second_step && !first_step) {
                 cv::ellipse(image, cv::Point(center_x, center_y), cv::Size(radius, radius), -90, RAD_TO_DEG(prev_angle), RAD_TO_DEG(current_angle), cv::Scalar(0,0,255), 1);
