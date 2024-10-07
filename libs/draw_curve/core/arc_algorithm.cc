@@ -35,11 +35,11 @@ void drawArcs(cv::Mat& image, double radius, double line_width, double step_dist
     if (!dashed) {
         drawPoint(image, radius, start_radians);
         drawPoint(image, radius, end_radians);
-        cv::ellipse(image, cv::Point(center_x, center_y), cv::Size(radius, radius), -90, RAD_TO_DEG(start_radians), RAD_TO_DEG(end_radians), cv::Scalar(0,0,255), -1);
+        cv::ellipse(image, cv::Point(center_x, center_y), cv::Size(radius, radius), -90, RAD_TO_DEG(start_radians), RAD_TO_DEG(end_radians), cv::Scalar(0,0,255), 1);
 
         drawPoint(image, radius+line_width, start_radians);
         drawPoint(image, radius+line_width, end_radians);
-        cv::ellipse(image, cv::Point(center_x, center_y), cv::Size(radius+line_width, radius+line_width), -90, RAD_TO_DEG(start_radians), RAD_TO_DEG(end_radians), cv::Scalar(0,0,255), -1);
+        cv::ellipse(image, cv::Point(center_x, center_y), cv::Size(radius+line_width, radius+line_width), -90, RAD_TO_DEG(start_radians), RAD_TO_DEG(end_radians), cv::Scalar(0,0,255), 1);
     }
     else {
         while (current_angle <= end_radians) {
