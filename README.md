@@ -5,7 +5,7 @@
 
 # track_model_curve
 
-Console-based arc calculator using OpenCV, drawn with OpenCV's ellipse function.
+QML-based UI for an arc calculator using OpenCV, with arcs drawn via OpenCV's ellipse function.
 
 ## Dependencies
 
