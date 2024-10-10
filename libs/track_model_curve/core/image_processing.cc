@@ -43,14 +43,15 @@ void ImageProcessing::run() {
 		double line_width = mParameterModel.getLine_width();
 		bool dashed_left = mParameterModel.getDashed_left();
 		bool dashed_right = mParameterModel.getDashed_right();
+		int subdivisions = mParameterModel.getSubdivisions();
 
 		cv::Mat image = cv::Mat::zeros(height, width, CV_8UC3);
 
 		//left line
-		drawArcs(image, positionX, positionY, curve_radius, -line_width, dashed_length, dashed_space , curved_angle_start, curved_angle_end, dashed_left);
+		drawArcs(image, positionX, positionY, curve_radius, -line_width, dashed_length, dashed_space , curved_angle_start, curved_angle_end, dashed_left, subdivisions);
 
 		//right line
-		drawArcs(image, positionX, positionY, curve_radius+track_width, line_width, dashed_length, dashed_space, curved_angle_start, curved_angle_end, dashed_right);
+		drawArcs(image, positionX, positionY, curve_radius+track_width, line_width, dashed_length, dashed_space, curved_angle_start, curved_angle_end, dashed_right, subdivisions);
 
 		QImage img((uchar*)image.data, image.cols, image.rows, QImage::Format_RGB888);
 		mImageModel.setImage(QPixmap::fromImage(img));

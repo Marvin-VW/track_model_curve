@@ -135,6 +135,17 @@ ApplicationWindow
                 onValueChanged: parameterModel.dashed_right = value
             }
 
+            AdvancedSlider {
+                id: subdivisions
+                width: parent.width
+                name: "subdivisions"
+                from: 0
+                to: 200
+                value: parameterModel.subdivisions
+                stepSize: 1
+                onValueChanged: parameterModel.subdivisions = value
+            }
+
         }
 
         Image {

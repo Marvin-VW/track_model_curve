@@ -55,6 +55,8 @@ public:
     ADD_PROPERTY(double, curved_angle_end, Curved_angle_end, 90.0)
 	ADD_PROPERTY(int, dashed_left, Dashed_left, 0.0)
     ADD_PROPERTY(int, dashed_right, Dashed_right, 0.0)
+    ADD_PROPERTY(int, subdivisions, Subdivisions, 30.0)
+	
 
 Q_SIGNALS:
 
